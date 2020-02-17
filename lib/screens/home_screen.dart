@@ -1,6 +1,6 @@
+import 'package:capstone_app/assets/custom_fonts.dart';
 import 'package:capstone_app/widgets/reports.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,14 +9,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   String name = "Jie-Wen Lim";
-  final _headerStyle = GoogleFonts.montserrat(
-      textStyle: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold));
-  final _header2Style = GoogleFonts.montserrat(
-    textStyle: TextStyle(
-      fontSize: 20.0,
-      color: Colors.deepOrange,
-    ),
-  );
+  final _headerStyle = headerStyle1;
+  final _header2Style = headerStyle3;
 
   @override
   Widget build(BuildContext context) {

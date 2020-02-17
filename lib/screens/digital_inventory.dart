@@ -1,6 +1,6 @@
+import 'package:capstone_app/assets/custom_fonts.dart';
 import 'package:capstone_app/widgets/itemCard.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DigitalInventory extends StatefulWidget {
   @override
@@ -8,8 +8,7 @@ class DigitalInventory extends StatefulWidget {
 }
 
 class _DigitalInventoryState extends State<DigitalInventory> {
-  final _headerStyle = GoogleFonts.montserrat(
-      textStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold));
+  final _headerStyle = headerStyle2;
 
   @override
   Widget build(BuildContext context) {
