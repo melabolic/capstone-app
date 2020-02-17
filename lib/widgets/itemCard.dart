@@ -1,26 +1,12 @@
+import 'package:capstone_app/assets/custom_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:capstone_app/models/food_items_model.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
 class ItemCards extends StatelessWidget {
-  final _bodyStyle = GoogleFonts.montserrat(
-    textStyle: TextStyle(fontSize: 20),
-  );
-  final _subtitleStyle = GoogleFonts.esteban(
-    textStyle: TextStyle(
-      fontSize: 12.0,
-      color: Colors.grey.shade600,
-    ),
-  );
-  final _subtitle2Style = GoogleFonts.esteban(
-    textStyle: TextStyle(
-      fontSize: 12.0,
-      color: Colors.grey.shade600,
-      fontWeight: FontWeight.w600,
-      fontStyle: FontStyle.italic,
-    ),
-  );
+  final _subtitleStyle = subtitleStyle;
+  final _subtitle2Style = subtitle2Style;
+  final _bodyStyle = bodyStyle;
 
   String _dateToString(String date) {
     return DateFormat.yMMMd().format(DateTime.parse(date));
@@ -58,7 +44,7 @@ class ItemCards extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 12.0),
               child: ListTile(
                 title: Text("${foodItems[index].name}", style: _bodyStyle),
-                // using ${} simply 
+                // using ${} is the same as simply calling the item in it
                 subtitle: RichText(
                   text: TextSpan(
                     children: <TextSpan>[
